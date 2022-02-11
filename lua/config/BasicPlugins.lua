@@ -28,7 +28,7 @@ require'nvim-tree'.setup {
     auto_close = true,
     -- 不显示 git 状态图标
     git = {
-        enable = false
+        enable = true
     }
 }
 
@@ -36,7 +36,7 @@ require'nvim-tree'.setup {
 require('lualine').setup {
     options = {
       icons_enabled = true,
-      theme = 'auto',
+      theme = 'ayu_dark',
       component_separators = { left = '', right = ''},
       section_separators = { left = '', right = ''},
       disabled_filetypes = {},
