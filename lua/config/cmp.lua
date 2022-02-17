@@ -72,7 +72,7 @@ lsp_installer.settings({
 })
 local lsp_installer_servers = require('nvim-lsp-installer.servers')
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-local servers = { 'clangd', 'pyright', 'tsserver' }
+local servers = { 'clangd', 'pyright', 'tsserver', 'bashls', 'grammarly', 'jsonls', 'julials', 'vimls'}
 -- Loop through the servers listed above and set them up. If a server is
 -- not already installed, install it.
 for _, server_name in pairs(servers) do

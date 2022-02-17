@@ -5,6 +5,7 @@ lua require('config/BasicPlugins')
 lua require('config/autopairs')
 set completeopt=menu,menuone,noselect
 colorscheme base16-onedark
+let g:python3_host_prog = '/home/gll/.conda/envs/a/bin/python'
 
 nnoremap <leader>t :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
@@ -27,3 +28,4 @@ nnoremap <silent><leader>8 <Cmd>BufferLineGoToBuffer 8<CR>
 nnoremap <silent><leader>9 <Cmd>BufferLineGoToBuffer 9<CR>
 nnoremap <silent><leader>bp :BufferLinePick<CR>
 nnoremap <silent><leader>bpc :BufferLinePickClose<CR>
+
