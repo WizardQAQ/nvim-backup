@@ -9,8 +9,8 @@ let g:python3_host_prog = '/home/gll/.conda/envs/a/bin/python'
 
 nnoremap <leader>t :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
-nnoremap <leader>m :MarkdownPreview<CR>
-nnoremap <leader>mc :MarkdownPreviewStop<CR>
+nnoremap <leader>mk :MarkdownPreview<CR>
+nnoremap <leader>ms :MarkdownPreviewStop<CR>
 
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
@@ -29,3 +29,7 @@ nnoremap <silent><leader>9 <Cmd>BufferLineGoToBuffer 9<CR>
 nnoremap <silent><leader>bp :BufferLinePick<CR>
 nnoremap <silent><leader>bpc :BufferLinePickClose<CR>
 
+nnoremap <silent><leader>h :HopWord<CR>
+
+nnoremap <silent><leader>jc :JupyterConnect<CR>
+nnoremap <silent><leader>jr :JupyterRun<CR>
