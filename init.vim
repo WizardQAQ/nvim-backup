@@ -1,10 +1,10 @@
 let mapleader = " " 
 lua require('plugins')
-lua require('config/cmp')
+lua require('config/tmp_cmp')
 lua require('config/BasicPlugins')
 lua require('config/autopairs')
 set completeopt=menu,menuone,noselect
-colorscheme base16-onedark
+colorscheme codedark
 let g:python3_host_prog = '/home/gll/.conda/envs/a/bin/python'
 
 nnoremap <leader>t :NvimTreeToggle<CR>
@@ -32,4 +32,5 @@ nnoremap <silent><leader>bpc :BufferLinePickClose<CR>
 nnoremap <silent><leader>h :HopWord<CR>
 
 nnoremap <silent><leader>jc :JupyterConnect<CR>
-nnoremap <silent><leader>jr :JupyterRun<CR>
+nnoremap <silent><leader>jr :JupyterRunFile<CR>
+nnoremap <silent><leader>jq :!jupyter qtconsole &<CR>

@@ -115,6 +115,11 @@ _G.packer_plugins = {
     path = "/home/gll/.local/share/nvim/site/pack/packer/start/jupyter-vim",
     url = "https://github.com/jupyter-vim/jupyter-vim"
   },
+  ["lspkind-nvim"] = {
+    loaded = true,
+    path = "/home/gll/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
+    url = "https://github.com/onsails/lspkind-nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/gll/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -192,6 +197,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gll/.local/share/nvim/site/pack/packer/start/ultisnips",
     url = "https://github.com/SirVer/ultisnips"
+  },
+  ["vim-code-dark"] = {
+    loaded = true,
+    path = "/home/gll/.local/share/nvim/site/pack/packer/start/vim-code-dark",
+    url = "https://github.com/tomasiser/vim-code-dark"
   },
   ["vim-snippets"] = {
     loaded = true,

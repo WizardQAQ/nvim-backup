@@ -13,6 +13,8 @@ return require('packer').startup(function(use)
         'RRethy/nvim-base16',
         'sainnhe/sonokai',
         'lukas-reineke/indent-blankline.nvim',
+        'onsails/lspkind-nvim',
+        'tomasiser/vim-code-dark',
         {'williamboman/nvim-lsp-installer', branch = 'dont-prepare-root-dir'},
         'jupyter-vim/jupyter-vim',
         'windwp/nvim-autopairs',
