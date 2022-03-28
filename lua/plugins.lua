@@ -16,6 +16,7 @@ return require('packer').startup(function(use)
         'onsails/lspkind-nvim',
         'tomasiser/vim-code-dark',
         {'williamboman/nvim-lsp-installer', branch = 'dont-prepare-root-dir'},
+	{'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
         'jupyter-vim/jupyter-vim',
         'windwp/nvim-autopairs',
         {'mg979/vim-visual-multi', branch = 'master'},
