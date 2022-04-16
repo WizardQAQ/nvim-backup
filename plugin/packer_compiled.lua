@@ -120,11 +120,6 @@ _G.packer_plugins = {
     path = "/home/gll/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
     url = "https://github.com/onsails/lspkind-nvim"
   },
-  ["lualine-lsp-progress"] = {
-    loaded = true,
-    path = "/home/gll/.local/share/nvim/site/pack/packer/start/lualine-lsp-progress",
-    url = "https://github.com/arkav/lualine-lsp-progress"
-  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/gll/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -192,6 +187,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gll/.local/share/nvim/site/pack/packer/start/sonokai",
     url = "https://github.com/sainnhe/sonokai"
+  },
+  ["telescope-fzf-native.nvim"] = {
+    loaded = true,
+    path = "/home/gll/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,

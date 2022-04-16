@@ -15,7 +15,7 @@ return require('packer').startup(function(use)
         'lukas-reineke/indent-blankline.nvim',
         'onsails/lspkind-nvim',
         'tomasiser/vim-code-dark',
-        {'williamboman/nvim-lsp-installer', branch = 'dont-prepare-root-dir'},
+        {'williamboman/nvim-lsp-installer'},
 	{'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
         'jupyter-vim/jupyter-vim',
         'windwp/nvim-autopairs',
