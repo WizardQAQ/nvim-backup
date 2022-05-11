@@ -1,7 +1,6 @@
 return require('packer').startup(function(use)
     use {
         'wbthomason/packer.nvim',
-        'neovim/nvim-lspconfig',
         'hrsh7th/cmp-nvim-lsp',
         'hrsh7th/cmp-buffer',
         'hrsh7th/cmp-path',
@@ -15,10 +14,11 @@ return require('packer').startup(function(use)
         'lukas-reineke/indent-blankline.nvim',
         'onsails/lspkind-nvim',
         'tomasiser/vim-code-dark',
-        {'williamboman/nvim-lsp-installer'},
-	{'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
         'jupyter-vim/jupyter-vim',
         'windwp/nvim-autopairs',
+        'williamboman/nvim-lsp-installer',
+        "neovim/nvim-lspconfig",
+	      {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
         {'mg979/vim-visual-multi', branch = 'master'},
         {'nvim-treesitter/nvim-treesitter',run = ':TSUpdate'},
         {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'},

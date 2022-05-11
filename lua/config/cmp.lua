@@ -66,24 +66,31 @@ lsp_installer.settings({
         }
     }
 })
-local lsp_installer_servers = require('nvim-lsp-installer.servers')
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+lsp_installer.setup {}
+local lspconfig = require("lspconfig")
+-- local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 local servers = { 'clangd', 'pyright', 'tsserver', 'bashls', 'grammarly', 'jsonls', 'julials', 'vimls', 'sumneko_lua'}
--- Loop through the servers listed above and set them up. If a server is
--- not already installed, install it.
-for _, server_name in pairs(servers) do
-    local server_available, server = lsp_installer_servers.get_server(server_name)
-    if server_available then
-        server:on_ready(function ()
-            -- When this particular server is ready (i.e. when installation is finished or the server is already installed),
-            -- this function will be invoked. Make sure not to also use the "catch-all" lsp_installer.on_server_ready()
-            -- function to set up your servers, because by doing so you'd be setting up the same server twice.
-            local opts = {capabilities = capabilities,}
-            server:setup(opts)
-        end)
-        if not server:is_installed() then
-            -- Queue the server to be installed.
-            server:install()
-        end
-    end
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+
+for _, server in ipairs(lspinstaller.get_installed_servers()) do
+  lspconfig[server.name].setup{
+    on_attach = function()
+      nmap('gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
+      nmap('gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
+      nmap('K', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
+      nmap('gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
+      nmap('<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>')
+      nmap('<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
+      nmap('<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>')
+      nmap('gr', '<cmd>lua vim.lsp.buf.references()<CR>')
+      nmap('<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>')
+      nmap('<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>')
+    end,
+
+    flags = {
+      debounce_text_changes = 150,
+    },
+
+    capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+  }
 end
