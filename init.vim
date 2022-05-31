@@ -1,4 +1,4 @@
-if exists('g:vscode')
+ if exists('g:vscode')
     let mapleader = " "
     let g:python3_host_prog = '/home/gll/.conda/envs/cgcnn/bin/python'
     lua require('vscodePlugins')
@@ -6,6 +6,8 @@ if exists('g:vscode')
     lua require('config/vscodeSetting')
     nnoremap <silent><leader>hw :HopWord<CR>
     nnoremap <silent><leader>hl :HopLine<CR>
+    nnoremap go <Cmd>call VSCodeNotify('workbench.action.quickOpen')<CR>
+    noremap <C-d> <Cmd>call VSCodeNotifyVisual('editor.action.addSelectionToNextFindMatch', 1)<CR>   
 else    
     let mapleader = " " 
     lua require('plugins')
