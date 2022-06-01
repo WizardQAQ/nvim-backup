@@ -41,7 +41,7 @@ else
     nnoremap <silent><leader>bp :BufferLinePick<CR>
     nnoremap <silent><leader>bpc :BufferLinePickClose<CR>
 
-    nnoremap <silent><leader>h :HopWord<CR>
+    nnoremap <silent><leader>hw :HopWord<CR>
     nnoremap <silent><leader>hl :HopLine<CR>
 
     nnoremap <silent><leader>jc :JupyterConnect<CR>
