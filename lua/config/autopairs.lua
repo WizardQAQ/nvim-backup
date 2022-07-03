@@ -21,7 +21,7 @@ require('nvim-autopairs').setup({
   })
 
 -- add a lisp filetype (wrap my-function), FYI: Hardcoded = { "clojure", "clojurescript", "fennel", "janet" }
-cmp_autopairs.lisp[#cmp_autopairs.lisp+1] = "racket"
+-- cmp_autopairs.lisp[#cmp_autopairs.lisp+1] = "racket"
 
 local Rule = require('nvim-autopairs.rule')
 local npairs = require('nvim-autopairs')
