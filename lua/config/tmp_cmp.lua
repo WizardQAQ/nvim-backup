@@ -156,7 +156,7 @@ lsp_installer.settings({
 })
 local lsp_installer_servers = require('nvim-lsp-installer.servers')
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-local servers = { 'clangd', 'pyright', 'tsserver', 'bashls', 'grammarly', 'jsonls', 'julials', 'vimls', 'sumneko_lua'}
+local servers = { 'clangd', 'tsserver', 'bashls', 'grammarly', 'jsonls', 'julials', 'vimls', 'sumneko_lua'}
 -- Loop through the servers listed above and set them up. If a server is
 -- not already installed, install it.
 for _, server_name in pairs(servers) do
@@ -176,6 +176,23 @@ for _, server_name in pairs(servers) do
     end
 end
 
+local pyright_opts = {
+    capabilities = capabilities,
+    settings = {
+        pyright = {
+            typeCheckingMode = 'off'
+        }
+    }
+}
+local pyserver_ava, pyserver = lsp_installer_servers.get_server('pyright')
+if pyserver_ava then
+    pyserver:on_ready(function ()
+        pyserver:setup(pyright_opts)
+    end)
+    if not pyserver:is_installed() then
+        pyserver:install()
+    end
+end
 
 -- apperance setting
 
