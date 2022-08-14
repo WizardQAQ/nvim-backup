@@ -10,6 +10,7 @@
     noremap <C-d> <Cmd>call VSCodeNotifyVisual('editor.action.addSelectionToNextFindMatch', 1)<CR>   
 else    
     let mapleader = " " 
+    set mouse=a
     lua require('plugins')
     lua require('config/tmp_cmp')
     lua require('config/BasicPlugins')
