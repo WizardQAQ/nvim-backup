@@ -16,7 +16,8 @@ else
     lua require('config/BasicPlugins')
     lua require('config/autopairs')
     set completeopt=menu,menuone,noselect
-    colorscheme codedark
+    " colorscheme codedark
+    colorscheme everblush
     " let g:python3_host_prog = '/home/gll/.conda/envs/a/bin/python'
 
     nnoremap <leader>t :NvimTreeToggle<CR>

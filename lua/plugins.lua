@@ -5,7 +5,15 @@ return require('packer').startup(function(use)
         'hrsh7th/cmp-buffer',
         'hrsh7th/cmp-path',
         'hrsh7th/cmp-cmdline',
-        'hrsh7th/nvim-cmp',
+        {'hrsh7th/nvim-cmp',
+          requires = {
+            {
+              'quangnguyen30192/cmp-nvim-tags',
+              -- if you want the sources is available for some file types
+              ft = {
+                'python',
+                'c'}
+            }}},
         'SirVer/ultisnips',
         'honza/vim-snippets',
         'quangnguyen30192/cmp-nvim-ultisnips',
@@ -18,6 +26,7 @@ return require('packer').startup(function(use)
         'windwp/nvim-autopairs',
         'williamboman/nvim-lsp-installer',
         "neovim/nvim-lspconfig",
+        { 'Everblush/everblush.nvim', as = 'everblush' },
 	      {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
         {'mg979/vim-visual-multi', branch = 'master'},
         {'nvim-treesitter/nvim-treesitter',run = ':TSUpdate'},

@@ -120,7 +120,10 @@ cmp.setup {
     { name = 'nvim_lsp' },
     { name = 'ultisnips' }, -- For ultisnips users.
   }, {
-    { name = 'buffer' },
+        { name = 'buffer' },
+        { name = 'tags' },
+        { name = 'path' },
+        { name = 'cmdline' }
   })
 }
 
