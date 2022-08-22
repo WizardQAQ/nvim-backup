@@ -138,6 +138,11 @@ _G.packer_plugins = {
     path = "/home/gll/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["lush.nvim"] = {
+    loaded = true,
+    path = "/home/gll/.local/share/nvim/site/pack/packer/start/lush.nvim",
+    url = "https://github.com/rktjmp/lush.nvim"
+  },
   ["markdown-preview.nvim"] = {
     commands = { "MarkdownPreview" },
     loaded = false,
@@ -185,6 +190,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gll/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  ["onehalf-lush"] = {
+    loaded = true,
+    path = "/home/gll/.local/share/nvim/site/pack/packer/start/onehalf-lush",
+    url = "https://github.com/CodeGradox/onehalf-lush"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -248,9 +258,9 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
-vim.cmd [[au FileType c ++once lua require("packer.load")({'cmp-nvim-tags'}, { ft = "c" }, _G.packer_plugins)]]
 vim.cmd [[au FileType python ++once lua require("packer.load")({'cmp-nvim-tags'}, { ft = "python" }, _G.packer_plugins)]]
+vim.cmd [[au FileType c ++once lua require("packer.load")({'cmp-nvim-tags'}, { ft = "c" }, _G.packer_plugins)]]
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end

@@ -1,7 +1,7 @@
 -- settings of indent blankline plugin
 vim.opt.list = true
-vim.opt.listchars:append("space:⋅")
-vim.opt.listchars:append("eol:↴")
+-- vim.opt.listchars:append("space:⋅")
+-- vim.opt.listchars:append("eol:↴")
 
 require("indent_blankline").setup {
     show_end_of_line = true,
@@ -34,7 +34,7 @@ require'nvim-tree'.setup {
 require('lualine').setup {
     options = {
       icons_enabled = true,
-      theme = 'ayu_dark',
+      theme = 'onelight',
       component_separators = { left = '', right = ''},
       section_separators = { left = '', right = ''},
       disabled_filetypes = {},
