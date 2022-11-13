@@ -1,6 +1,6 @@
  if exists('g:vscode')
     let mapleader = " "
-    let g:python3_host_prog = '/home/gll/.conda/envs/cgcnn/bin/python'
+    let g:python3_host_prog = '/home/gll/.conda/envs/matExplorer/bin/python'
     lua require('vscodePlugins')
     lua require('config/autopairs')
     lua require('config/vscodeSetting')
@@ -12,7 +12,7 @@ else
     let mapleader = " " 
     set mouse=a
     lua require('plugins')
-    lua require('config/tmp_cmp')
+    lua require('config/cmp_mason')
     lua require('config/BasicPlugins')
     lua require('config/autopairs')
     set completeopt=menu,menuone,noselect
@@ -20,7 +20,7 @@ else
     colorscheme everblush
     " set background=light
     " colorscheme base16-one-light
-    " let g:python3_host_prog = '/home/gll/.conda/envs/a/bin/python'
+    let g:python3_host_prog = '/home/gll/.conda/envs/matExplorer/bin/python'
 
     nnoremap <leader>t :NvimTreeToggle<CR>
     nnoremap <leader>r :NvimTreeRefresh<CR>
