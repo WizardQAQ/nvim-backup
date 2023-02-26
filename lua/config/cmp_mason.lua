@@ -157,16 +157,19 @@ require("mason").setup({
     }
 })
 require("mason-lspconfig").setup({
-    ensure_installed = { 'sumneko_lua', 'rust_analyzer', 'clangd', 'tsserver', 'bashls', 'grammarly', 'jsonls', 'julials',
+    ensure_installed = { 'lua_ls', 'rust_analyzer', 'clangd', 'tsserver', 'bashls', 'grammarly', 'jsonls',
         'vimls', 'pyright' },
-    automatic_installation = true
-})
-require("lspconfig").pyright.setup(
-    {
+    automatic_installation = true,
+    pyright = {
         typeCheckingMode = 'off'
-        }
-    
-)
+    }
+})
+-- require("lspconfig").pyright.setup(
+--     {
+--         typeCheckingMode = 'off'
+--         }
+--     
+-- )
 
 -- apperance setting
 
