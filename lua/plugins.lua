@@ -22,7 +22,7 @@ return require('packer').startup(function(use)
         'tomasiser/vim-code-dark',
         "rktjmp/lush.nvim",
         "CodeGradox/onehalf-lush",
-        'lukas-reineke/indent-blankline.nvim',
+        { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
         'onsails/lspkind-nvim',
         'jupyter-vim/jupyter-vim',
         'windwp/nvim-autopairs',

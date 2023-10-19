@@ -1,11 +1,21 @@
 -- settings of indent blankline plugin
 vim.opt.list = true
--- vim.opt.listchars:append("space:⋅")
--- vim.opt.listchars:append("eol:↴")
-
-require("indent_blankline").setup {
-    show_end_of_line = true,
-    space_char_blankline = " ",
+vim.opt.listchars:append("space:⋅")
+vim.opt.listchars:append("eol:↴")
+local highlight = {
+  "CursorColumn",
+  "Whitespace",
+}
+require("ibl").setup {
+    indent = {
+      char = " ",
+      highlight = highlight
+    },
+    whitespace = {
+      remove_blankline_trail = true,
+      highlight = highlight
+    },
+    scope = {enable = true}
 }
 
 -- settings of buffer line
@@ -34,7 +44,7 @@ require'nvim-tree'.setup {
 require('lualine').setup {
     options = {
       icons_enabled = true,
-      theme = 'onedark',
+      theme = 'everblush',
       component_separators = { left = '', right = ''},
       section_separators = { left = '', right = ''},
       disabled_filetypes = {},
