@@ -147,6 +147,8 @@ cmp.setup.cmdline(':', {
 })
 
 -- mason installer
+local servers = { 'lua_ls', 'rust_analyzer', 'clangd', 'tsserver', 'bashls', 'grammarly', 'jsonls',
+'vimls', 'pyright' }
 require("mason").setup({
     ui = {
         icons = {
@@ -157,21 +159,27 @@ require("mason").setup({
     }
 })
 require("mason-lspconfig").setup({
-    ensure_installed = { 'lua_ls', 'rust_analyzer', 'clangd', 'tsserver', 'bashls', 'grammarly', 'jsonls',
-        'vimls', 'pyright' },
+    ensure_installed = servers,
     automatic_installation = true,
-    pyright = {
-        typeCheckingMode = 'off'
-    }
 })
--- require("lspconfig").pyright.setup(
---     {
---         typeCheckingMode = 'off'
---         }
---     
--- )
 
--- apperance setting
+-- Add additional capabilities supported by nvim-cmp
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+local lspconfig = require('lspconfig')
+
+-- Enable some language servers with the additional completion capabilities offered by nvim-cmp
+for _, lsp in ipairs(servers) do
+  lspconfig[lsp].setup {
+    -- on_attach = my_custom_on_attach,
+    capabilities = capabilities,
+  }
+end
+lspconfig.pyright.setup(
+    {
+        typeCheckingMode = 'off'
+        }
+)
 
 
 local cmp = require('cmp')
