@@ -11,7 +11,8 @@
 else    
     let mapleader = " " 
     set mouse=a
-    lua require('plugins')
+    lua require('lazy_init')
+    " lua require('plugins')
     lua require('config/cmp_mason')
     lua require('config/BasicPlugins')
     lua require('config/autopairs')

@@ -14,8 +14,7 @@ require("ibl").setup {
     whitespace = {
       remove_blankline_trail = true,
       highlight = highlight
-    },
-    scope = {enable = true}
+    }
 }
 
 -- settings of buffer line
