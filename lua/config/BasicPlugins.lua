@@ -71,6 +71,7 @@ require('lualine').setup {
 
 
 -- settings of treesitter
+require("nvim-treesitter.install").prefer_git = true
 require'nvim-treesitter.configs'.setup {
     -- 安装 language parser
     -- :TSInstallInfo 命令查看支持的语言

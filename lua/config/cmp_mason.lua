@@ -141,8 +141,7 @@ cmp.setup.cmdline(':', {
 })
 
 -- mason installer
-local servers = { 'rust_analyzer', 'clangd', 'tsserver', 'bashls', 'grammarly', 'jsonls',
-'vimls', 'pyright' }
+local servers = { 'awk_ls', 'bashls', 'pyright', 'clangd', 'texlab', 'lua_ls', 'markdown_oxide', 'sqlls', 'yamlls' }
 require("mason").setup({
     ui = {
         icons = {

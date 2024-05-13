@@ -21,7 +21,7 @@ else
     " colorscheme everblush
     " set background=light
     " colorscheme base16-one-light
-    let g:python3_host_prog = '/home/gll/.conda/envs/matExplorer/bin/python'
+    let g:python3_host_prog = '/usr/bin/python3'
 
     nnoremap <leader>t :NvimTreeToggle<CR>
     nnoremap <leader>r :NvimTreeRefresh<CR>
